@@ -25,6 +25,9 @@ tvr * TVR::load(int & count) {
 	ifstream in("smeta.txt");
 	if (!in.is_open())
 		return nullptr;
+	in >> count;
+	if (count < 1)
+		return nullptr;
 	tvr *arr = new tvr[count];
 	for (int i = 0; i < count; i++)
 		in >> arr[i];
@@ -55,7 +58,6 @@ void TVR::add(tvr** arr, int* count) {
 		cout << "Oshibka: ne udalos vydelit pamyat" << endl;
 		return;
 	}
-
 	for (int i = 0; i < *count; i++) {
 		temp[i] = (*arr)[i];
 	}
@@ -72,7 +74,6 @@ void TVR::add(tvr** arr, int* count) {
 	temp[*count].setColor(color);
 	temp[*count].setCost(cost);
 	delete[] * arr;
-
 	*arr = temp;
 	(*count)++;
 }

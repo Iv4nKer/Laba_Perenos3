@@ -4,7 +4,7 @@ using namespace TVR;
 int main() {
 	tvr *arr = nullptr;
 	int count = 0;
-	load(count);
+	arr = load(count);
 	int n;
 	do {
 		cout << ("---------------------------------------\n") << endl;
