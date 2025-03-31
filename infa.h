@@ -20,7 +20,7 @@ namespace TVR {
 	std::ostream& operator << (std::ostream & out, const tvr& f);
 	std::istream& operator >> (std::istream & in, tvr& f);
 	tvr * load(int & count);
-	void create(tvr **arr, int *count);
+	tvr * create(int & count);
 	void save(tvr *arr, int count);
 	void add(tvr **arr, int *count);
 	void del(tvr *arr, int *count);

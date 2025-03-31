@@ -34,14 +34,15 @@ tvr * TVR::load(int & count) {
 	in.close();
 	return arr;
 }
-void TVR::create(tvr** arr, int* count) {
-	*count = 5;
-	*arr = new tvr[*count];
-	(*arr)[0] = { "Pen", "Red", 15 };
-	(*arr)[1] = { "Book", "Black", 25 };
-	(*arr)[2] = { "Lineika", "Wood", 50 };
-	(*arr)[3] = { "Karandash", "Gray", 25 };
-	(*arr)[4] = { "Reshebnik po mat analizu", "Gold", 1500 };
+tvr * TVR::create(int & count) {
+	count = 5;
+	tvr* arr = new tvr[count];
+	arr[0] = { "Pen", "Red", 15 };
+	arr[1] = { "Book", "Black", 25 };
+	arr[2] = { "Lineika", "Wood", 50 };
+	arr[3] = { "Karandash", "Gray", 25 };
+	arr[4] = { "Reshebnik po mat analizu", "Gold", 1500 };
+	return arr;
 }
 void TVR::save(tvr *arr, int count) {
 	ofstream out("smeta.txt");

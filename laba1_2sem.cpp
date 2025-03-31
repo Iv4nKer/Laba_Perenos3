@@ -20,7 +20,7 @@ int main() {
 		cin >> n;
 		switch (n) {
 		case 1:
-			create(&arr, &count);
+			arr = create(count);
 			break;
 		case 2:
 			show(arr, count);
