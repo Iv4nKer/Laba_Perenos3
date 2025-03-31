@@ -17,6 +17,8 @@ namespace TVR {
 		void setColor(const std::string& color) { _color = color; }
 		void setCost(int cost) { _cost = cost; }
 	};
+	std::ostream& operator << (std::ostream & out, const tvr& f);
+	std::istream& operator >> (std::istream & in, tvr& f);
 	tvr * load(int & count);
 	void create(tvr **arr, int *count);
 	void save(tvr *arr, int count);
