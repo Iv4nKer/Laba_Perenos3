@@ -41,7 +41,7 @@ tvr * TVR::create(int & count) {
 	arr[1] = { "Book", "Black", 25 };
 	arr[2] = { "Lineika", "Wood", 50 };
 	arr[3] = { "Karandash", "Gray", 25 };
-	arr[4] = { "Reshebnik_po_mat_analizu", "Gold", 1500 };
+	arr[4] = { "Reshebnik", "Gold", 1500 };
 	return arr;
 }
 void TVR::save(tvr *arr, int count) {
