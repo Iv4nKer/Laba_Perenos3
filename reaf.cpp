@@ -35,9 +35,8 @@ tvr * TVR::load(int & count) {
 	return arr;
 }
 void TVR::create(tvr** arr, int* count) {
-	ifstream file("smeta.txt", ios::binary);
 	*count = 5;
-	*arr = new tvr[*count + 1];
+	*arr = new tvr[*count];
 	(*arr)[0] = { "Pen", "Red", 15 };
 	(*arr)[1] = { "Book", "Black", 25 };
 	(*arr)[2] = { "Lineika", "Wood", 50 };
